@@ -1,89 +1,141 @@
-# Game Design Document
-This is a place holder for your game design document. You are advised to write your document in [Markdown](http://daringfireball.net/projects/markdown/) and the following section will show you how to write a document using Markdown markup.
+Goulis's Space Adventure
+Game Design Document
+===================================
 
-Alternativley, you can write your document in plain text if you wish.
+**Summary**
+-Players will pilot the USS Magic Fantastic across the solar system to return home
+-There will be 3 levels populated by varous enemies that will need to be dispaced
 
-----
-
-## Markdown
-Markdown is a human-readable structured plain text format that is used to convert text into HTML. GitHub automatically renders Markdown into HTML.
-
-This is a crash course on how to use Markdown. The following section will show you the plain text used to generate the document shown in the rendering section.
-
-### Code
-
-```
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-
-You can also write in **bold** or _italics_. You can also ~~strike through~~ or write inline `Code Segments`
-
->Blockquotes are done as such.
-
-Just make sure to separate paragraphs with an emptyline. 
-Otherwise, they are considered in the same paragraph.
-
-You link to [Google](https://www.google.com) as such and lists are written has follows:
-  1. First you indent with two empty spaces.
-  1. Then, you use:
-    * `1.` to signal an ordered (i.e. numbered) list, or
-    * `*`, `-`, `+` to represent an unordered list.
-      1. Make sure to maintain indentation
-      1. As it is used to identify sub-lists
-  1. Numbering and symboles don't matter as they are auto-generated later.
-
-Tables are pretty easy to make:
-
-| Tables        | Are           | Easy          |
-| ------------- |:-------------:| -------------:|
-| left-aligned  | centered      | right-aligned |
-| header are    | bolded and    | centered      |
-| zebra stripes | are neat      | 1             |
+Level 1: Dangerous Departure
+	There will be an series of incomming ships and asteroids the player will need to evade
+	The player wil scroll toward enemies at a fixed pace and can move left and right
+	The player can shoot a limitied number of amunition with the 'l' key
+Lavel 2: Unfriendly Universe
+	Similar to the last level but now enemies at a fixed position will shoot on a timed interval
+Level 3: Final Frenzy
+	Fixed position enemies encluded but now high speed incoming comets and irregularly moving spaceships introduced
 
 
-Images are added inline by using the following syntax
-![alt text](http://octodex.github.com/images/Professortocat_v2.png "Image Title")
-```
+**Controls**
+Players will be able to use "a" and "d" to move left and right (standard WASD) 
+Players will be able to shoot a bullet with 'l'
+Special weapons can be activated with spacebar
 
-----
+**Score**
+Completing levels 1 and 2 will reward 1000 points each
+Completing the final level gives 2500 points
+Killing an enemy earns 50 points
+Collecting A Powerup earns 150 points
 
-### Rendering
-This section shows the rendering of the plain text above.
-
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-
-You can also write in **bold** or _italics_. You can also ~~strike through~~ or write inline `Code Segments`
-
->Blockquotes are done as such.
-
-Just make sure to separate paragraphs with an emptyline. 
-Otherwise, they are considered in the same paragraph.
-
-You link to [Google](https://www.google.com) as such and lists are written has follows:
-  1. First you indent with two empty spaces.
-  1. Then, you use:
-    * `1.` to signal an ordered (i.e. numbered) list, or
-    * `*`, `-`, `+` to represent an unordered list.
-      1. Make sure to maintain indentation
-      1. As it is used to identify sub-lists
-  1. Numbering and symboles don't matter as they are auto-generated later.
-
-Tables are pretty easy to make:
-
-| Tables        | Are           | Easy          |
-| ------------- |:-------------:| -------------:|
-| left-aligned  | centered      | right-aligned |
-| header are    | bolded and    | centered      |
-| zebra stripes | are neat      | 1             |
+**Lives**
+Players are given 3 lives at the start of the game
+Every 1000 points earned will grant another life
+Players are only allowed to be hit once before their ship explodes and they lose 1 life
 
 
-Images are added inline by using the following syntax
-![alt text](http://octodex.github.com/images/Professortocat_v2.png "Image Title")
+**Sample Layout**
+
+
+Your ship will move upward toward the top of the screen until you meet a checkered finish line
+Top Of The Screen==========================================
+		 =	          Score  		  =
+		 =		 			  =
+		 =					  =
+		 =					  =
+		 =               Enemies		  =
+		 =		  Will  		  =
+		 =		Be Around		  =
+		 =		This Area		  =
+		 =					  =
+		 =					  =
+		 =		 			  =
+		 =					  =
+		 =					  =
+		 =		 			  =
+		 =					  =
+		 =					  =
+		 =		 			  =
+		 =					  =
+        	 =		      ^			  =
+	 	 =Player ship Here:  / \		  =
+	 	 =					  =
+	   	 =	            Life Boxes Here: $$$  =
+Bottom Of The Screen=======================================
+
+
+Menu Screen
+
+Top Of The Screen==========================================
+		 =	                		  =
+		 =		 			  =
+		 =					  =
+		 =		********		  =
+		 =             * TITLE  *	 	  =
+		 =		********		  =
+		 =					  =
+		 =		 START			  =
+		 =	      STAGE SELECT		  =
+		 =	      HOW TO PLAY		  =
+		 =		 			  =
+		 =		HIGH SCORES		  =
+		 =		1.			  =
+		 =		2.			  =
+		 =		3.			  =
+		 =		4.			  =
+		 =		5.			  =
+		 =					  =
+        	 =		      			  =
+	 	 =					  =
+	 	 =					  =
+	   	 =	            			  =
+Bottom Of The Screen=======================================
+
+
+********MOVING OBJECTS********
+
+**Player Ship**
+     ^
+<-- / \ -->
+Moves left and right and can shoot projectiles up
+
+**Asteroids**
+	&&&~~~~~~
+       &&&&&~~~~~~~
+	&&&~~~~~~
+Oncaming fixed path obstacles
+
+**Cargo Ships**
+  \$/
+  ($)
+Oncoming ships that move in a wave like pattern
+
+**Satelite**
+  ==0==
+Wide objects that bounce left and right at very high speeds
+
+**Space Station**
+   ||
+ ==00==
+   ||
+Fixed Object that shoots in 4 directions on a timed interval
+
+**UFO**
+  ***
+  *0*
+  ***
+Spherical ship that shoots in a random direction every second
+movement is irrefular
+
+**Commet**
+   #
+   #
+  ###
+  QQQ
+ QQQQQ
+  QQQ
+Fast oncoming object that is not hurt by standard bullets
+
+
+
+
 
