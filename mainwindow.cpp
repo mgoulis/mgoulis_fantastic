@@ -13,24 +13,24 @@
  i=-1;
  
  /**Initial Setup*/
- lives = new int(1);
- score = new int(0);
+ lives = 2; score = 0; bonghits = 0; lboom = 0; lpoop = 0;
  qfl = new QFormLayout;
  sp = new QPixmap("assets/ship.png"); 
- uf = new QPixmap("assets/UFO.png");
- player = new pship(sp, 450, 150);
- UFO1 = new ufo(uf,-300, 150); UFO2 = new ufo(uf,-600, 150); UFO3 = new ufo(uf,-800, 130); UFO4 = new ufo(uf,-900, 150); UFO5 = new ufo(uf,-1000, 150); UFO6 = new ufo(uf,-1050, 150);
+ mt = new QPixmap("assets/med.png"); uf = new QPixmap("assets/UFO.png");
+ c1 = new QPixmap("assets/citygreen.png"); c2 = new QPixmap("assets/cityred.png");
+ center = new city(c1, 700, 0);
+ player = new pship(sp, 620, 400);
  
  QBrush BBlack(Qt::black);
- scene->setSceneRect(0,0,300,500);
- scene->setBackgroundBrush(BBlack);
+ scene->setSceneRect(0,0,800,800);
+ view->fitInView(0, 0, 800, 800);
+ scene->setBackgroundBrush(QImage("assets/stars.png"));
  
  
  //QGraphicsPixmapItem item( QPixmap::fromImage(image));
- 
  scene->addItem(player); 
- scene->addItem(UFO1); scene->addItem(UFO2); scene->addItem(UFO3); scene->addItem(UFO4); scene->addItem(UFO5); scene->addItem(UFO6);
- qfl ->addRow(view);
+ scene->addItem(center); 
+ qfl->addRow(view);
  
  setFocus();
  setLayout(qfl); /**Establish Final Layout*/
@@ -44,15 +44,11 @@
 void MyWidget::keyPressEvent( QKeyEvent *e ) {
 
 switch ( e->key() ) {
-		case Qt::Key_Left : player->setVx(-2);
+		case Qt::Key_Left : player->setVx(-6);
 				    break;
 
-		case Qt::Key_Right :player->setVx(2);
+		case Qt::Key_Right :player->setVx(6);
 				    break;
-
-		//case Qt::Key_Up :{cout<<"U ";break;};
-
-		//case Qt::Key_Down:{cout<<"D ";break;};;
 		
 		case Qt::Key_Space :
 				    break;
@@ -68,9 +64,6 @@ switch ( z->key() ) {
 		case Qt::Key_Right :player->setVx(0);
 				    break;
 
-		//case Qt::Key_Up :{cout<<"U ";break;};
-
-		//case Qt::Key_Down:{cout<<"D ";break;};;
 		    }
 }
 
@@ -81,16 +74,46 @@ void MyWidget::live() {
     //we call start
     timer->start();
     //This is how we get our view displayed.
-    qfl->update();
+    //qfl->update();
     this->show();
 }
 
 void MyWidget::handleTimer()
 	{
+	 while(lpoop<3)
+	 	{
+	 	 if(bonghits<10)
+	 	 	{
+	 	 	 med *temp = new med(mt, 0, (40+(rand()%720)));
+	 	 	 scene->addItem(temp);
+	 	 	 egroup.push_back(temp);
+	 	 	}
+	 	 if(bonghits<20&&bonghits>=10)
+	 	 	{
+	 	 	 ufo *temp = new ufo(uf, 0, (200+(rand()%400)));
+	 	 	 scene->addItem(temp);
+	 	 	 egroup.push_back(temp);
+	 	 	}
+	 	 bonghits = bonghits+1;
+	 	 lpoop = lpoop +1;
+	 	}
 	 i++;
 	 player->manage();
-	 UFO1->manage(i); UFO2->manage(i); UFO3->manage(i); UFO4->manage(i); UFO5->manage(i); UFO6->manage(i);
-	 if(i>=50)
+	 vector<int> hold;
+	 int j = 0;
+	 vector<enemy*>::iterator it =egroup.begin();
+	 for(;it!=egroup.end();it++)
+	 	{
+	 	 (*it)->manage(i);
+	 	 if((*it)->collidesWithItem(center))
+	 	 	{
+	 	 	 center->setPixmap(*c2);
+	 	 	 scene->removeItem(*it);
+	 	 	 //egroup.erase(egroup.begin()+j);
+	 	 	}
+	 	 j++;
+	 	}
+	 if(i>=100)
 	   {i=-1;}
 	}
 

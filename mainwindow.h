@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 #include <iostream>
 #include <QMainWindow>
+#include "city.h"
+#include "med.h"
 #include <QFormLayout>
 #include <QApplication>
 #include <QPushButton>
@@ -41,20 +43,16 @@
  private:
     //Overall Form Structure
     QFormLayout *qfl;
-    QPixmap * uf;
-    QPixmap * sp;
-    int i;
-    int* lives;
-    int* score;
+    QPixmap *uf, *sp, *c1, *c2, *mt;
+    int i, lives, score, bonghits, lboom, lpoop;
     
     	/**Gameplay*/
+    vector<enemy*> egroup;
     QGraphicsScene *scene;
     QGraphicsView *view;
     QBrush BBlack;
+    city * center;
     pship * player;
-    ufo * UFO1, *UFO2, *UFO3, *UFO4, *UFO5, *UFO6;
-    
-    
 };
 
 #endif

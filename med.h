@@ -1,14 +1,14 @@
- #ifndef UFO_H
-#define UFO_H
-#include "general.h"
+ #ifndef MED_H
+#define MED_H
+#include "enemy.h"
 
 using namespace std;
 
-class ufo:public general
+class med:public enemy
 {
  
  public:
- 	ufo(QPixmap *pm, int ny, int nx);
+ 	med(QPixmap *pm, int ny, int nx);
  	void manage(int i);
 };
 

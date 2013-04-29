@@ -1,17 +1,11 @@
-#include "ufo.h"
+#include "med.h"
 using namespace std;
 
 
-ufo::ufo(QPixmap *pm, int ny, int nx):general(pm,ny,nx){}
+med::med(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx){}
 
-void ufo::manage(int i)
+void med::manage(int i)
 	{
-	 if(i<=25)
-	    {setVx(-4);}
-	 if(i>25)
-	    {setVx(4);}
-	 int temp = getVx()+getx();
-	 setx(temp);
 	 sety(gety()+getVy());
-	 setPos(temp,gety());
+	 setPos(getx(),gety());
 	}

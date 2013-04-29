@@ -1,10 +1,10 @@
  #ifndef UFO_H
 #define UFO_H
-#include "general.h"
+#include "enemy.h"
 
 using namespace std;
 
-class ufo:public general
+class ufo:public enemy
 {
  
  public:

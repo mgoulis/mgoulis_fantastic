@@ -2,13 +2,13 @@
 using namespace std;
 
 
-ufo::ufo(QPixmap *pm, int ny, int nx):general(pm,ny,nx){}
+ufo::ufo(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx){}
 
 void ufo::manage(int i)
 	{
-	 if(i<25)
+	 if(i<50)
 	    {setVx(-4);}
-	 if(i>=25)
+	 if(i>=50)
 	    {setVx(4);}
 	 int temp = getVx()+getx();
 	 setx(temp);

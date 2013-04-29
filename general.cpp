@@ -9,7 +9,7 @@ general::general(QPixmap *pm, int ny, int nx)
  x=nx;
  y=ny;
  vX = 0;
- vY = 1;
+ vY = 4;
  setPos(x,y);
 }
 
