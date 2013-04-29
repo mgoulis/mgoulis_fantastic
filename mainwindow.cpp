@@ -1,5 +1,8 @@
  #include "mainwindow.h"
  #include <QImage>
+ #include "sat.h"
+ #include <sstream>
+ 
  
  
   
@@ -13,19 +16,22 @@
  i=-1;
  
  /**Initial Setup*/
- lives = 2; score = 0; bonghits = 0; lboom = 0; lpoop = 0;
+ lives = 2; score = 0; bonghits = 0; lboom = 0; lpoop = 0; weightwatchers = 3; ggallin = 0;
  qfl = new QFormLayout;
  sp = new QPixmap("assets/ship.png"); 
- mt = new QPixmap("assets/med.png"); uf = new QPixmap("assets/UFO.png");
+ mt = new QPixmap("assets/med.png"); uf = new QPixmap("assets/UFO.png"); stt = new QPixmap("assets/sat.png");
+ btt = new QPixmap("assets/green.png"); 
  c1 = new QPixmap("assets/citygreen.png"); c2 = new QPixmap("assets/cityred.png");
  center = new city(c1, 700, 0);
  player = new pship(sp, 620, 400);
+ qgl = new QGridLayout;
+
  
  QBrush BBlack(Qt::black);
  scene->setSceneRect(0,0,800,800);
  view->fitInView(0, 0, 800, 800);
  scene->setBackgroundBrush(QImage("assets/stars.png"));
- 
+
  
  //QGraphicsPixmapItem item( QPixmap::fromImage(image));
  scene->addItem(player); 
@@ -43,6 +49,7 @@
 
 void MyWidget::keyPressEvent( QKeyEvent *e ) {
 
+//hey commands for movement and firing
 switch ( e->key() ) {
 		case Qt::Key_Left : player->setVx(-6);
 				    break;
@@ -51,10 +58,14 @@ switch ( e->key() ) {
 				    break;
 		
 		case Qt::Key_Space :
+				    bullet *temp = new bullet(btt, player->gety(),player->getx());
+	 	 	 	    scene->addItem(temp);
+	 	 	            bgroup.push_back(temp);
 				    break;
 		    }
 }
 
+//key commands to release movement
 void MyWidget::keyReleaseEvent( QKeyEvent *z ) {
 
 switch ( z->key() ) {
@@ -80,17 +91,24 @@ void MyWidget::live() {
 
 void MyWidget::handleTimer()
 	{
-	 while(lpoop<3)
+	 while(lpoop<weightwatchers)
 	 	{
-	 	 if(bonghits<10)
+	 	 
+	 	 if(bonghits<9)
 	 	 	{
 	 	 	 med *temp = new med(mt, 0, (40+(rand()%720)));
 	 	 	 scene->addItem(temp);
 	 	 	 egroup.push_back(temp);
 	 	 	}
-	 	 if(bonghits<20&&bonghits>=10)
+	 	 if(bonghits<18&&bonghits>=9)
 	 	 	{
 	 	 	 ufo *temp = new ufo(uf, 0, (200+(rand()%400)));
+	 	 	 scene->addItem(temp);
+	 	 	 egroup.push_back(temp);
+	 	 	}
+	 	 if(bonghits<27&&bonghits>=18)
+	 	 	{
+	 	 	 sat *temp = new sat(stt, 0, (250+(rand()%300)));
 	 	 	 scene->addItem(temp);
 	 	 	 egroup.push_back(temp);
 	 	 	}
@@ -99,19 +117,52 @@ void MyWidget::handleTimer()
 	 	}
 	 i++;
 	 player->manage();
-	 vector<int> hold;
-	 int j = 0;
+	 vector<bullet*>::iterator ii =bgroup.begin();
+	 for(;ii!=bgroup.end();ii++)
+	 	{
+	 	 (*ii)->manage();
+	 	}
 	 vector<enemy*>::iterator it =egroup.begin();
-	 for(;it!=egroup.end();it++)
+	 for(;it!=egroup.end();)
 	 	{
 	 	 (*it)->manage(i);
 	 	 if((*it)->collidesWithItem(center))
 	 	 	{
 	 	 	 center->setPixmap(*c2);
 	 	 	 scene->removeItem(*it);
-	 	 	 //egroup.erase(egroup.begin()+j);
+	 	 	 delete * it;
+	 	 	 it = egroup.erase(it);
+	 	 	 lpoop--;
+	 	 	 lives--;
+	 	 	 if (lives==0)
+	 	 	 	{cout<<score;exit(666);}
 	 	 	}
-	 	 j++;
+	 	 else{++it;}
+	 	}
+	 bool idea;
+	 vector<bullet*>::iterator yy =bgroup.begin();
+	 for(;yy!=bgroup.end();)
+	 	{
+	 	 idea = false;
+	 	 vector<enemy*>::iterator xx =egroup.begin();
+		 for(;xx!=egroup.end();)
+		 	{
+		 	 if((*xx)->collidesWithItem(*yy))
+		 	 	{
+		 	 	 idea = true;
+		 	 	 scene->removeItem(*xx);
+		 	 	 scene->removeItem(*yy);
+		 	 	 delete * xx;
+		 	 	 delete * yy;
+		 	 	 xx = egroup.erase(xx);
+		 	 	 yy = bgroup.erase(yy);
+		 	 	 lpoop--;
+		 	 	 score+=500;
+		 	 	 break;
+		 	 	}
+		 	 else{++xx;}
+		 	}
+		 if(idea == false){++yy;}
 	 	}
 	 if(i>=100)
 	   {i=-1;}

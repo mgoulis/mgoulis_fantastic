@@ -11,6 +11,7 @@ class enemy:public general
  	enemy(QPixmap *pm, int ny, int nx);
  	virtual void manage(int i)
  		{
+ 		 i = i;
 		 sety(gety()+getVy());
 		 setPos(getx(),gety());
 		};

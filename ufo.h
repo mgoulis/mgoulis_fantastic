@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class ufo:public enemy
+class ufo:public enemy //IT TAKES A NATION OF MILLIONS!!!
 {
  
  public:

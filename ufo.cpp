@@ -2,7 +2,10 @@
 using namespace std;
 
 
-ufo::ufo(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx){}
+ufo::ufo(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx)
+	{
+	 setVy(1);
+	}
 
 void ufo::manage(int i)
 	{
