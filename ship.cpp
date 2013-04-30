@@ -16,9 +16,13 @@ void pship::move(int mx)
 void pship::manage()
 	{
 	 int temp = getVx()+getx();
-	 setx(temp);
 	 sety(gety()+getVy());
-	 setPos(temp,gety());
+	 if(getx()<-50)
+	 	{temp = 825;}
+	 if(getx()>850)
+	 	{temp = -25;}
+	 setx(temp);
+	 setPos(getx(),gety());
 	}
 	
 /*

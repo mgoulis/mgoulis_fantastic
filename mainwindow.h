@@ -23,6 +23,9 @@
 #include "ship.h"
 #include "ufo.h"
 #include "bullet.h"
+#include "poo.h"
+#include "spy.h"
+#include "pdp.h"
 #define WINDOW_MAX_X 500
 #define WINDOW_MAX_Y 5000
 
@@ -38,6 +41,8 @@
   
  public slots:
      void handleTimer();
+     void gamestart();
+     void pauz();
  
  protected:
      void keyPressEvent( QKeyEvent *e );   
@@ -46,15 +51,21 @@
  private:
     //Overall Form Structure
     QFormLayout *qfl;
-    QPixmap *uf, *sp, *c1, *c2, *mt, *stt, *btt;
-    QGridLayout * qgl;
+    QPixmap *uf, *sp, *c1, *c2, *mt, *stt, *btt, *pink, *invade, *poop;
+    QGridLayout * qgl, *qg2;
     QGraphicsTextItem *l, *s;
     int i, lives, score, bonghits, lboom, lpoop, weightwatchers, ggallin;
-    QGraphicsSimpleTextItem * t1, t2;
+    bool holding;
+    QGraphicsSimpleTextItem * Score, *V;
+    QPushButton * quit, *newg, *pause;
+    QLineEdit *nom;
+    QLabel *nomlab;
+    void cleararea();
     
     	/**Gameplay*/
     vector<enemy*> egroup;
     vector<bullet*> bgroup;
+    vector<QGraphicsSimpleTextItem*> xgroup;
     QGraphicsScene *scene;
     QGraphicsView *view;
     QBrush BBlack;

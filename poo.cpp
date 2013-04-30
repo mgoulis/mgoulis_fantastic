@@ -1,13 +1,13 @@
-#include "sat.h"
+#include "poo.h"
 using namespace std;
 
 
-sat::sat(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx)
+poo::poo(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx)
 	{
 	 setVy(2);
 	}
 
-void sat::manage(int i)
+void poo::manage(int i)
 	{
 	 int temp = getVx()+getx();
 	 setx(temp);

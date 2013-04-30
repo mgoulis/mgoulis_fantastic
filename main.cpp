@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 {
  QApplication app(argc, argv);
  MyWidget widget;
+ widget.setGeometry(0,0,658,570);
  widget.live();
  return app.exec();
 }

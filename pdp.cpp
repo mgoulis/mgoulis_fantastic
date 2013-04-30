@@ -1,13 +1,13 @@
-#include "ufo.h"
+#include "pdp.h"
 using namespace std;
 
 
-ufo::ufo(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx)
+pdp::pdp(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx)
 	{
-	 setVy(1);
+	 setVy(2);
 	}
 
-void ufo::manage(int i)
+void pdp::manage(int i)
 	{
 	 if(i<50)
 	    {setVx(-2);}
