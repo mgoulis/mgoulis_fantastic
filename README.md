@@ -1,12 +1,12 @@
 # Game - Programming Assignments Private Repository
 ### Student Information
-  + Name: Tommy Trojan
-  + USC Email: ttrojan@usc.edu
-  + USC ID: 0123456789
+  + Name: Michael Goulis
+  + USC Email: mgoulis@usc.edu
+  + USC ID: 2324285462
 
 ### Game Information
-  + Game Name: myAwsomeGame
-  + Game Description: One sentence game description
+  + Game Name: Mystery Fantastic Adventure
+  + Game Description: Defend Your Farm Against Evil Invaders
   + [Game Design Doc](GameDesignDoc.md)
 
 
@@ -14,11 +14,9 @@
 The grader should use the following procedure to compile and run the code:
 ```shell
 #Compile Instructions
-echo "Write command here"
-#Doxygen Instructions
-echo "Write command here"
+make
 #Command to run
-echo "Write command here"
+./puzzle_mgoulis
 ```
 
 ### Screenshots -- [Optional]
