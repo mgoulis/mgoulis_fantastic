@@ -68,7 +68,7 @@
  qfl->addRow(qgl);
  qfl->addRow(qg2);
  
- setLayout(qfl);/
+ setLayout(qfl);
  
  V = new QGraphicsSimpleTextItem("    MYSTERY\nSPECTACULAR\n  ADVENTURE");
  xgroup.push_back(V);
