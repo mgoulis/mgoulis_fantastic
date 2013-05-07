@@ -14,7 +14,12 @@
 The grader should use the following procedure to compile and run the code:
 ```shell
 #Compile Instructions
+qmake -project
+qmake
 make
+#Doxygen Instructions
+doxygen -g config.txt
+doxygen config.txt
 #Command to run
 ./puzzle_mgoulis
 ```
