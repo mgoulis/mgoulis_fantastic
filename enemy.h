@@ -15,6 +15,7 @@ class enemy:public general
 		 sety(gety()+getVy());
 		 setPos(getx(),gety());
 		};
+	bool lethal;
 };
 
 #endif

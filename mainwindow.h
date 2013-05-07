@@ -2,8 +2,7 @@
 #define MAINWINDOW_H
 #include <iostream>
 #include <QMainWindow>
-#include "city.h"
-#include "med.h"
+
 #include <QFormLayout>
 #include <QApplication>
 #include <QPushButton>
@@ -20,12 +19,15 @@
 #include <QGraphicsView>
 #include <QKeyEvent>
 #include "QObject"
+#include "city.h"
+#include "med.h"
 #include "ship.h"
 #include "ufo.h"
 #include "bullet.h"
 #include "poo.h"
 #include "spy.h"
 #include "pdp.h"
+#include <fstream>
 #define WINDOW_MAX_X 500
 #define WINDOW_MAX_Y 5000
 
@@ -51,16 +53,21 @@
  private:
     //Overall Form Structure
     QFormLayout *qfl;
-    QPixmap *uf, *sp, *c1, *c2, *mt, *stt, *btt, *pink, *invade, *poop;
+    QPixmap *uf, *sp, *spp, *sppp, *c1, *c2, *mt, *stt, *btt, *pink, *invade, *poop, *sc1, *sc2;
     QGridLayout * qgl, *qg2;
     QGraphicsTextItem *l, *s;
-    int i, lives, score, bonghits, lboom, lpoop, weightwatchers, ggallin;
+    int i, lives, score, bonghits, lboom, lpoop, weightwatchers, ggallin, plife;
     bool holding;
     QGraphicsSimpleTextItem * Score, *V;
     QPushButton * quit, *newg, *pause;
     QLineEdit *nom;
     QLabel *nomlab;
     void cleararea();
+    void level2();
+    void level3();
+    void playerhit();
+    void clearscroll();
+    void highscore();
     
     	/**Gameplay*/
     vector<enemy*> egroup;

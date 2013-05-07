@@ -4,7 +4,7 @@ using namespace std;
 
 pdp::pdp(QPixmap *pm, int ny, int nx):enemy(pm,ny,nx)
 	{
-	 setVy(2);
+	 setVy(3);
 	}
 
 void pdp::manage(int i)
