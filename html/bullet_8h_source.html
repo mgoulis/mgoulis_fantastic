@@ -83,24 +83,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &quot;general.h&quot;</span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="keyword">using namespace </span>std;
-<a name="l00006"></a>00006 
-<a name="l00007"></a><a class="code" href="classbullet.html">00007</a> <span class="keyword">class </span><a class="code" href="classbullet.html">bullet</a>:<span class="keyword">public</span> <a class="code" href="classgeneral.html">general</a>
-<a name="l00008"></a>00008 {
-<a name="l00009"></a>00009  
-<a name="l00010"></a>00010  <span class="keyword">public</span>:
-<a name="l00011"></a>00011         <a class="code" href="classbullet.html">bullet</a>(QPixmap *pm, <span class="keywordtype">int</span> ny, <span class="keywordtype">int</span> nx);
-<a name="l00012"></a>00012         <span class="keywordtype">int</span> manage();
-<a name="l00013"></a>00013         <span class="keywordtype">int</span> lifespan;
-<a name="l00014"></a>00014 };
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="preprocessor">#endif</span>
+<a name="l00011"></a><a class="code" href="classbullet.html">00011</a> <span class="keyword">class </span><a class="code" href="classbullet.html" title="Class That Sets Up Bullet Behavior.">bullet</a>:<span class="keyword">public</span> <a class="code" href="classgeneral.html" title="Class That Defines General Behavior.">general</a>
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013  
+<a name="l00014"></a>00014  <span class="keyword">public</span>:
+<a name="l00016"></a>00016         <a class="code" href="classbullet.html" title="Class That Sets Up Bullet Behavior.">bullet</a>(QPixmap *pm, <span class="keywordtype">int</span> ny, <span class="keywordtype">int</span> nx);
+<a name="l00018"></a>00018         <span class="keywordtype">int</span> manage();
+<a name="l00020"></a><a class="code" href="classbullet.html#ad9834658c10d040ea1307a1289ff715c">00020</a>         <span class="keywordtype">int</span> <a class="code" href="classbullet.html#ad9834658c10d040ea1307a1289ff715c">lifespan</a>;
+<a name="l00021"></a>00021 };
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -112,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 29 2013 22:34:52 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 7 2013 16:28:13 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

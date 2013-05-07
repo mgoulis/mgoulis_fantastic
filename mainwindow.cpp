@@ -11,16 +11,13 @@
  MyWidget::MyWidget(QWidget *parent)
      : QWidget(parent)
  { 
- /**Area To Set Up The Game Area*/
  scene = new QGraphicsScene();
  view = new QGraphicsView( scene);
  
- /**Initial Setup*/
  qfl = new QFormLayout;
  plife = 3; lives = 2; score = 0; bonghits = 0; lboom = 0; lpoop = 0; weightwatchers = 3; ggallin = 0; i=-1;
  holding = true;
  
- //QPixmap files
  sp = new QPixmap("assets/ship.png"); 
  spp = new QPixmap("assets/ship2.png"); 
  sppp = new QPixmap("assets/ship3.png"); 
@@ -71,7 +68,7 @@
  qfl->addRow(qgl);
  qfl->addRow(qg2);
  
- setLayout(qfl); /**Establish Final Layout*/
+ setLayout(qfl);/
  
  V = new QGraphicsSimpleTextItem("    MYSTERY\nSPECTACULAR\n  ADVENTURE");
  xgroup.push_back(V);
@@ -150,37 +147,41 @@ void MyWidget::handleTimer()
 	 	 	 scene->addItem(temp);
 	 	 	 egroup.push_back(temp);
 	 	 	}
-	 	 if(bonghits>=25&&bonghits<29)
+	 	 if(bonghits>=25&&bonghits<29&&egroup.empty())
 	 	 	{
-	 	 	 level2();
-	 	 	 bonghits = 30;
+ 	 	 	 level2();
+ 	 	 	 bonghits = 30;
+ 	 	 	 lpoop=0;
 	 	 	}
 	 	 if(bonghits<50&&bonghits>=30)
 	 	 	{
+	 	 	 weightwatchers=3;
 	 	 	 sat *temp = new sat(stt, 0, (250+(rand()%300)));
 	 	 	 scene->addItem(temp);
 	 	 	 egroup.push_back(temp);
 	 	 	}
 	 	 if(bonghits<80&&bonghits>=50)
 	 	 	{
+	 	 	 weightwatchers=3;
 	 	 	 spy *temp = new spy(invade, 0,  (200+(rand()%400)));
 	 	 	 scene->addItem(temp);
 	 	 	 egroup.push_back(temp);
 	 	 	}
-	 	 if((bonghits>80&&bonghits<89)/*||*/)
+	 	 if((bonghits>80&&bonghits<89)&&egroup.empty())
 	 	 	{
-	 	 	 level3();
-	 	 	 bonghits = 90;
+ 	 	 	level3();
+ 	 	 	bonghits = 90;
+ 	 	 	lpoop=0;
 	 	 	}
 	 	 if(bonghits<120&&bonghits>=90)
 	 	 	{
-	 	 	 weightwatchers=4;
 	 		 poo *temp = new poo(poop, 0, (200+(rand()%400)));
 	 	 	 scene->addItem(temp);
 	 	 	 egroup.push_back(temp);
 	 	 	}
 	 	 if(bonghits>=120)
 	 	 	{
+	 	 	 weightwatchers=4;
 	 	 	 pdp *temp = new pdp(pink, 0,  (200+(rand()%400)));
 	 	 	 scene->addItem(temp);
 	 	 	 egroup.push_back(temp);

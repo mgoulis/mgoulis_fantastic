@@ -82,84 +82,85 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define MAINWINDOW_H</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QMainWindow&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;city.h&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;med.h&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QFormLayout&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QApplication&gt;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QPushButton&gt;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;QFont&gt;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;QHBoxLayout&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;QGridLayout&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;QDialog&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;QLabel&gt;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;QTimer&gt;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;QLineEdit&gt;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;QTextEdit&gt;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;QGraphicsScene&gt;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;QGraphicsTextItem&gt;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;QGraphicsView&gt;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;QKeyEvent&gt;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;QObject&quot;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;ship.h&quot;</span>
-<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;ufo.h&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;bullet.h&quot;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;poo.h&quot;</span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;spy.h&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;pdp.h&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#define WINDOW_MAX_X 500</span>
-<a name="l00030"></a>00030 <span class="preprocessor"></span><span class="preprocessor">#define WINDOW_MAX_Y 5000</span>
-<a name="l00031"></a>00031 <span class="preprocessor"></span>
-<a name="l00032"></a>00032  
-<a name="l00033"></a>00033  <span class="comment">// Class Definition</span>
-<a name="l00034"></a><a class="code" href="classMyWidget.html">00034</a>  <span class="keyword">class </span><a class="code" href="classMyWidget.html">MyWidget</a> :<span class="keyword">public</span> QWidget{
-<a name="l00035"></a>00035   Q_OBJECT
-<a name="l00036"></a>00036   
-<a name="l00037"></a>00037  <span class="keyword">public</span>:
-<a name="l00038"></a>00038      <a class="code" href="classMyWidget.html#a228e0cdad7acf281b07d50f131ce126b">MyWidget</a>(QWidget *parent = 0);
-<a name="l00039"></a>00039      QTimer * timer;
-<a name="l00040"></a>00040      <span class="keywordtype">void</span> live();
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QFormLayout&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QApplication&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QPushButton&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QFont&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;QHBoxLayout&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;QGridLayout&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;QDialog&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;QLabel&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;QTimer&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;QLineEdit&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;QTextEdit&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;QGraphicsScene&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;QGraphicsTextItem&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;QGraphicsView&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;QKeyEvent&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;QObject&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;city.h&quot;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;med.h&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;ship.h&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;ufo.h&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;bullet.h&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;poo.h&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;spy.h&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;pdp.h&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#define WINDOW_MAX_X 500</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span><span class="preprocessor">#define WINDOW_MAX_Y 5000</span>
+<a name="l00033"></a>00033 <span class="preprocessor"></span>
+<a name="l00038"></a>00038  <span class="comment">// Class Definition</span>
+<a name="l00039"></a><a class="code" href="classMyWidget.html">00039</a>  <span class="keyword">class </span><a class="code" href="classMyWidget.html" title="Main Window Class And General Gameplay.">MyWidget</a> :<span class="keyword">public</span> QWidget{
+<a name="l00040"></a>00040   Q_OBJECT
 <a name="l00041"></a>00041   
-<a name="l00042"></a>00042  <span class="keyword">public</span> slots:
-<a name="l00043"></a>00043      <span class="keywordtype">void</span> handleTimer();
-<a name="l00044"></a>00044      <span class="keywordtype">void</span> gamestart();
-<a name="l00045"></a>00045      <span class="keywordtype">void</span> pauz();
-<a name="l00046"></a>00046  
-<a name="l00047"></a>00047  <span class="keyword">protected</span>:
-<a name="l00048"></a>00048      <span class="keywordtype">void</span> keyPressEvent( QKeyEvent *e );   
-<a name="l00049"></a>00049      <span class="keywordtype">void</span> keyReleaseEvent( QKeyEvent * );   
-<a name="l00050"></a>00050  
-<a name="l00051"></a>00051  <span class="keyword">private</span>:
-<a name="l00052"></a>00052     <span class="comment">//Overall Form Structure</span>
-<a name="l00053"></a>00053     QFormLayout *qfl;
-<a name="l00054"></a>00054     QPixmap *uf, *sp, *c1, *c2, *mt, *stt, *btt, *pink, *invade, *poop;
-<a name="l00055"></a>00055     QGridLayout * qgl, *qg2;
-<a name="l00056"></a>00056     QGraphicsTextItem *l, *s;
-<a name="l00057"></a>00057     <span class="keywordtype">int</span> i, lives, score, bonghits, lboom, lpoop, weightwatchers, ggallin;
-<a name="l00058"></a>00058     <span class="keywordtype">bool</span> holding;
-<a name="l00059"></a>00059     QGraphicsSimpleTextItem * Score, *V;
-<a name="l00060"></a>00060     QPushButton * quit, *newg, *pause;
-<a name="l00061"></a>00061     QLineEdit *nom;
-<a name="l00062"></a>00062     QLabel *nomlab;
-<a name="l00063"></a>00063     <span class="keywordtype">void</span> cleararea();
-<a name="l00064"></a>00064     
-<a name="l00066"></a>00066     vector&lt;enemy*&gt; egroup;
-<a name="l00067"></a>00067     vector&lt;bullet*&gt; bgroup;
-<a name="l00068"></a>00068     vector&lt;QGraphicsSimpleTextItem*&gt; xgroup;
-<a name="l00069"></a>00069     QGraphicsScene *scene;
-<a name="l00070"></a>00070     QGraphicsView *view;
-<a name="l00071"></a>00071     QBrush BBlack;
-<a name="l00072"></a>00072     <a class="code" href="classcity.html">city</a> * center;
-<a name="l00073"></a>00073     <a class="code" href="classpship.html">pship</a> * player;
-<a name="l00074"></a>00074 };
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="preprocessor">#endif</span>
+<a name="l00042"></a>00042  <span class="keyword">public</span>:
+<a name="l00044"></a>00044      <a class="code" href="classMyWidget.html#a228e0cdad7acf281b07d50f131ce126b">MyWidget</a>(QWidget *parent = 0);
+<a name="l00046"></a><a class="code" href="classMyWidget.html#a923b117544cec8aff3fb8cc50fe6853a">00046</a>      QTimer * <a class="code" href="classMyWidget.html#a923b117544cec8aff3fb8cc50fe6853a">timer</a>;
+<a name="l00048"></a>00048      <span class="keywordtype">void</span> <a class="code" href="classMyWidget.html#a4524740a902212a980aa6418a5ead60a">live</a>();
+<a name="l00049"></a>00049   
+<a name="l00050"></a>00050  <span class="keyword">public</span> slots:
+<a name="l00052"></a>00052      <span class="keywordtype">void</span> <a class="code" href="classMyWidget.html#a7fe115a58a90c7ab2fcd9a53f22a5480">handleTimer</a>();
+<a name="l00054"></a>00054      <span class="keywordtype">void</span> <a class="code" href="classMyWidget.html#ac865162c8fd0a248ff3c898acf44346a">gamestart</a>();
+<a name="l00056"></a>00056      <span class="keywordtype">void</span> <a class="code" href="classMyWidget.html#af010626705546e924ce283a7b1a29f44">pauz</a>();
+<a name="l00057"></a>00057  
+<a name="l00058"></a>00058  <span class="keyword">protected</span>:
+<a name="l00060"></a>00060      <span class="keywordtype">void</span> <a class="code" href="classMyWidget.html#ace80c33361b5ab60cf68bdb7b402e8cc">keyPressEvent</a>( QKeyEvent *e ); 
+<a name="l00062"></a>00062      <span class="keywordtype">void</span> <a class="code" href="classMyWidget.html#a1c141bc73b239b6d2114cff966da0eb4">keyReleaseEvent</a>( QKeyEvent * );   
+<a name="l00063"></a>00063  
+<a name="l00064"></a>00064  <span class="keyword">private</span>:
+<a name="l00066"></a>00066     QFormLayout *qfl;
+<a name="l00068"></a>00068     QPixmap *uf, *sp, *spp, *sppp, *c1, *c2, *mt, *stt, *btt, *pink, *invade, *poop, *sc1, *sc2;
+<a name="l00070"></a>00070     QGridLayout * qgl, *qg2;
+<a name="l00072"></a>00072     <span class="keywordtype">int</span> i, lives, score, bonghits, lboom, lpoop, weightwatchers, ggallin, plife;
+<a name="l00074"></a>00074     <span class="keywordtype">bool</span> holding;
+<a name="l00076"></a>00076     QGraphicsSimpleTextItem * Score, *V;
+<a name="l00078"></a>00078     QPushButton * quit, *newg, *pause;
+<a name="l00080"></a>00080     QLineEdit *nom;
+<a name="l00082"></a>00082     QLabel *nomlab;
+<a name="l00084"></a>00084     <span class="keywordtype">void</span> cleararea();
+<a name="l00086"></a>00086     <span class="keywordtype">void</span> level2();
+<a name="l00088"></a>00088     <span class="keywordtype">void</span> level3();
+<a name="l00090"></a>00090     <span class="keywordtype">void</span> playerhit();
+<a name="l00092"></a>00092     <span class="keywordtype">void</span> highscore();
+<a name="l00094"></a>00094     vector&lt;enemy*&gt; egroup;
+<a name="l00096"></a>00096     vector&lt;bullet*&gt; bgroup;
+<a name="l00098"></a>00098     vector&lt;QGraphicsSimpleTextItem*&gt; xgroup;
+<a name="l00100"></a>00100     QGraphicsScene *scene;
+<a name="l00102"></a>00102     QGraphicsView *view;
+<a name="l00104"></a>00104     <a class="code" href="classcity.html" title="Class That Sets Up City/Farm.">city</a> * center;
+<a name="l00106"></a>00106     <a class="code" href="classpship.html" title="Player Ship.">pship</a> * player;
+<a name="l00107"></a>00107 };
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -171,7 +172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 29 2013 22:34:52 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 7 2013 16:28:13 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

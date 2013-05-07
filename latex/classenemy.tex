@@ -1,6 +1,15 @@
 \hypertarget{classenemy}{\section{enemy \-Class \-Reference}
 \label{classenemy}\index{enemy@{enemy}}
 }
+
+
+\-Class \-That \-Defines \-General \-Enemy \-Behavior.  
+
+
+
+
+{\ttfamily \#include $<$enemy.\-h$>$}
+
 \-Inheritance diagram for enemy\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +19,56 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classenemy_ac2807eb1d070f7aa0821f58aa91c6601}{{\bfseries enemy} (\-Q\-Pixmap $\ast$pm, int ny, int nx)}\label{classenemy_ac2807eb1d070f7aa0821f58aa91c6601}
-
+\hyperlink{classenemy_ac2807eb1d070f7aa0821f58aa91c6601}{enemy} (\-Q\-Pixmap $\ast$pm, int ny, int nx)
 \item 
-\hypertarget{classenemy_a0d29f4c2619917d29f8d7def0ef08430}{virtual void {\bfseries manage} (int i)}\label{classenemy_a0d29f4c2619917d29f8d7def0ef08430}
-
+virtual void \hyperlink{classenemy_a0d29f4c2619917d29f8d7def0ef08430}{manage} (int i)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classenemy_a89eadc9a59757ee451a82d6570c2d9da}{lethal}
 \end{DoxyCompactItemize}
 
+
+\subsection{\-Detailed \-Description}
+\-Class \-That \-Defines \-General \-Enemy \-Behavior. 
+
+\-This \-Is \-The \-Class \-That \-All \-Enemies \-Derrive \-From. \-It \-Establishes \-A \-Basic \-Movement \-Direction \-And \-Properties \begin{DoxyAuthor}{\-Author}
+\-Michael \-Goulis 
+\end{DoxyAuthor}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classenemy_ac2807eb1d070f7aa0821f58aa91c6601}{\index{enemy@{enemy}!enemy@{enemy}}
+\index{enemy@{enemy}!enemy@{enemy}}
+\subsubsection[{enemy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf enemy\-::enemy} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-Pixmap $\ast$}]{pm, }
+\item[{int}]{ny, }
+\item[{int}]{nx}
+\end{DoxyParamCaption}
+)}}\label{classenemy_ac2807eb1d070f7aa0821f58aa91c6601}
+\-Constructor \-That \-Creates \-Basic \-Behavior, namely movement 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classenemy_a0d29f4c2619917d29f8d7def0ef08430}{\index{enemy@{enemy}!manage@{manage}}
+\index{manage@{manage}!enemy@{enemy}}
+\subsubsection[{manage}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf enemy\-::manage} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{classenemy_a0d29f4c2619917d29f8d7def0ef08430}
+\-The \-Manage virtual function \-Dictates \-The \-Basic \-Scheme \-Of \-Movement \-With velocity on a timer 
+
+\-Reimplemented in \hyperlink{classmed_ab54619b6100c138944028f7aebfb0a7c}{med}, \hyperlink{classpdp_aae904ff0b9f039a022308e1e7c4d2b74}{pdp}, \hyperlink{classpoo_ae03c4d2028b2c80a75b7f5f97acb3fd0}{poo}, \hyperlink{classsat_a84bff237be60cae54ca2ad4bdb11001e}{sat}, \hyperlink{classspy_a62d51f0a8565603b7fbc454afd57baee}{spy}, and \hyperlink{classufo_a3d1a29b97be3d1fe676116d9e5a8482c}{ufo}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classenemy_a89eadc9a59757ee451a82d6570c2d9da}{\index{enemy@{enemy}!lethal@{lethal}}
+\index{lethal@{lethal}!enemy@{enemy}}
+\subsubsection[{lethal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf enemy\-::lethal}}}\label{classenemy_a89eadc9a59757ee451a82d6570c2d9da}
+\-Used to check movement pattern for certan objects 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

@@ -78,24 +78,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">enemy Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="enemy" --><!-- doxytag: inherits="general" --><div class="dynheader">
+<!-- doxytag: class="enemy" --><!-- doxytag: inherits="general" -->
+<p>Class That Defines General Enemy Behavior.  
+ <a href="classenemy.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="enemy_8h_source.html">enemy.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for enemy:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classenemy.png" usemap="#enemy_map" alt=""/>
   <map id="enemy_map" name="enemy_map">
-<area href="classgeneral.html" alt="general" shape="rect" coords="162,0,217,24"/>
-<area href="classmed.html" alt="med" shape="rect" coords="0,112,55,136"/>
-<area href="classpdp.html" alt="pdp" shape="rect" coords="65,112,120,136"/>
-<area href="classpoo.html" alt="poo" shape="rect" coords="130,112,185,136"/>
-<area href="classsat.html" alt="sat" shape="rect" coords="195,112,250,136"/>
-<area href="classspy.html" alt="spy" shape="rect" coords="260,112,315,136"/>
-<area href="classufo.html" alt="ufo" shape="rect" coords="325,112,380,136"/>
+<area href="classgeneral.html" title="Class That Defines General Behavior." alt="general" shape="rect" coords="162,0,217,24"/>
+<area href="classmed.html" title="Meteor Enemy." alt="med" shape="rect" coords="0,112,55,136"/>
+<area href="classpdp.html" title="My Little Pony (Pinkie Pie) Enemy." alt="pdp" shape="rect" coords="65,112,120,136"/>
+<area href="classpoo.html" title="Poop Enemy." alt="poo" shape="rect" coords="130,112,185,136"/>
+<area href="classsat.html" title="Satellite Enemy." alt="sat" shape="rect" coords="195,112,250,136"/>
+<area href="classspy.html" title="Space Invader Enemy." alt="spy" shape="rect" coords="260,112,315,136"/>
+<area href="classufo.html" title="UFO Enemy." alt="ufo" shape="rect" coords="325,112,380,136"/>
 </map>
  </div></div>
 
@@ -103,11 +109,87 @@ Inheritance diagram for enemy:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2807eb1d070f7aa0821f58aa91c6601"></a><!-- doxytag: member="enemy::enemy" ref="ac2807eb1d070f7aa0821f58aa91c6601" args="(QPixmap *pm, int ny, int nx)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>enemy</b> (QPixmap *pm, int ny, int nx)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d29f4c2619917d29f8d7def0ef08430"></a><!-- doxytag: member="enemy::manage" ref="a0d29f4c2619917d29f8d7def0ef08430" args="(int i)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>manage</b> (int i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenemy.html#ac2807eb1d070f7aa0821f58aa91c6601">enemy</a> (QPixmap *pm, int ny, int nx)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenemy.html#a0d29f4c2619917d29f8d7def0ef08430">manage</a> (int i)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenemy.html#a89eadc9a59757ee451a82d6570c2d9da">lethal</a></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Class That Defines General Enemy Behavior. </p>
+<p>This Is The Class That All Enemies Derrive From. It Establishes A Basic Movement Direction And Properties </p>
+<dl class="author"><dt><b>Author:</b></dt><dd>Michael Goulis </dd></dl>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ac2807eb1d070f7aa0821f58aa91c6601"></a><!-- doxytag: member="enemy::enemy" ref="ac2807eb1d070f7aa0821f58aa91c6601" args="(QPixmap *pm, int ny, int nx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classenemy.html#ac2807eb1d070f7aa0821f58aa91c6601">enemy::enemy</a> </td>
+          <td>(</td>
+          <td class="paramtype">QPixmap *&#160;</td>
+          <td class="paramname"><em>pm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor That Creates Basic Behavior, namely movement </p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a0d29f4c2619917d29f8d7def0ef08430"></a><!-- doxytag: member="enemy::manage" ref="a0d29f4c2619917d29f8d7def0ef08430" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classenemy.html#a0d29f4c2619917d29f8d7def0ef08430">enemy::manage</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The Manage virtual function Dictates The Basic Scheme Of Movement With velocity on a timer </p>
+
+<p>Reimplemented in <a class="el" href="classmed.html#ab54619b6100c138944028f7aebfb0a7c">med</a>, <a class="el" href="classpdp.html#aae904ff0b9f039a022308e1e7c4d2b74">pdp</a>, <a class="el" href="classpoo.html#ae03c4d2028b2c80a75b7f5f97acb3fd0">poo</a>, <a class="el" href="classsat.html#a84bff237be60cae54ca2ad4bdb11001e">sat</a>, <a class="el" href="classspy.html#a62d51f0a8565603b7fbc454afd57baee">spy</a>, and <a class="el" href="classufo.html#a3d1a29b97be3d1fe676116d9e5a8482c">ufo</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a89eadc9a59757ee451a82d6570c2d9da"></a><!-- doxytag: member="enemy::lethal" ref="a89eadc9a59757ee451a82d6570c2d9da" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classenemy.html#a89eadc9a59757ee451a82d6570c2d9da">enemy::lethal</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Used to check movement pattern for certan objects </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="enemy_8h_source.html">enemy.h</a></li>
 <li>enemy.cpp</li>
@@ -118,7 +200,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>manage</b> (i
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -130,7 +212,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>manage</b> (i
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 29 2013 22:34:53 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 7 2013 16:28:14 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

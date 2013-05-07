@@ -8,8 +8,19 @@
 #include "mainwindow.h"
 using namespace std;
 
-bool rootcheck(int);
+/** @mainpage CSCI 102 PA6
+@author Michael Goulis
+@section purpose Purpose/Overview
+Create A 2D Space Shooter Where The Player Must Defend Their Ship And Home Farm
 
+@section requirements Requirements
+record the players high score to a file;	
+create diffentent distince levels with changing background; 	
+create 2 objects that track player movement
+
+
+
+*/
 
 int main(int argc, char *argv[])
 {

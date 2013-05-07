@@ -1,41 +1,51 @@
 \hypertarget{classMyWidget}{\section{\-My\-Widget \-Class \-Reference}
 \label{classMyWidget}\index{\-My\-Widget@{\-My\-Widget}}
 }
+
+
+\-Main \-Window \-Class \-And \-General \-Gameplay.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\-h$>$}
+
 \subsection*{\-Public \-Slots}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classMyWidget_a7fe115a58a90c7ab2fcd9a53f22a5480}{void {\bfseries handle\-Timer} ()}\label{classMyWidget_a7fe115a58a90c7ab2fcd9a53f22a5480}
-
+void \hyperlink{classMyWidget_a7fe115a58a90c7ab2fcd9a53f22a5480}{handle\-Timer} ()
 \item 
-\hypertarget{classMyWidget_ac865162c8fd0a248ff3c898acf44346a}{void {\bfseries gamestart} ()}\label{classMyWidget_ac865162c8fd0a248ff3c898acf44346a}
-
+void \hyperlink{classMyWidget_ac865162c8fd0a248ff3c898acf44346a}{gamestart} ()
 \item 
-\hypertarget{classMyWidget_af010626705546e924ce283a7b1a29f44}{void {\bfseries pauz} ()}\label{classMyWidget_af010626705546e924ce283a7b1a29f44}
-
+void \hyperlink{classMyWidget_af010626705546e924ce283a7b1a29f44}{pauz} ()
 \end{DoxyCompactItemize}
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classMyWidget_a228e0cdad7acf281b07d50f131ce126b}{\-My\-Widget} (\-Q\-Widget $\ast$parent=0)
 \item 
-\hypertarget{classMyWidget_a4524740a902212a980aa6418a5ead60a}{void {\bfseries live} ()}\label{classMyWidget_a4524740a902212a980aa6418a5ead60a}
-
+void \hyperlink{classMyWidget_a4524740a902212a980aa6418a5ead60a}{live} ()
 \end{DoxyCompactItemize}
 \subsection*{\-Public \-Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classMyWidget_a923b117544cec8aff3fb8cc50fe6853a}{\-Q\-Timer $\ast$ {\bfseries timer}}\label{classMyWidget_a923b117544cec8aff3fb8cc50fe6853a}
-
+\-Q\-Timer $\ast$ \hyperlink{classMyWidget_a923b117544cec8aff3fb8cc50fe6853a}{timer}
 \end{DoxyCompactItemize}
 \subsection*{\-Protected \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classMyWidget_ace80c33361b5ab60cf68bdb7b402e8cc}{void {\bfseries key\-Press\-Event} (\-Q\-Key\-Event $\ast$e)}\label{classMyWidget_ace80c33361b5ab60cf68bdb7b402e8cc}
-
+void \hyperlink{classMyWidget_ace80c33361b5ab60cf68bdb7b402e8cc}{key\-Press\-Event} (\-Q\-Key\-Event $\ast$e)
 \item 
-\hypertarget{classMyWidget_a1c141bc73b239b6d2114cff966da0eb4}{void {\bfseries key\-Release\-Event} (\-Q\-Key\-Event $\ast$)}\label{classMyWidget_a1c141bc73b239b6d2114cff966da0eb4}
-
+void \hyperlink{classMyWidget_a1c141bc73b239b6d2114cff966da0eb4}{key\-Release\-Event} (\-Q\-Key\-Event $\ast$)
 \end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Main \-Window \-Class \-And \-General \-Gameplay. 
+
+\-Class \-That \-Manages \-Most \-Game \-Elements \-Including \-Display, \-Gameplay, \-And \-Output \begin{DoxyAuthor}{\-Author}
+\-Michael \-Goulis 
+\end{DoxyAuthor}
 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
@@ -46,11 +56,60 @@
 \item[{\-Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
 \end{DoxyParamCaption}
 )}}\label{classMyWidget_a228e0cdad7acf281b07d50f131ce126b}
-\hyperlink{classMyWidget}{\-My\-Widget} \-Is \-A \-Class \-That \-Generates all \-Windows, \-Buttons, and \-Scenes \-To \-Be \-Shown \-Area \-To \-Set \-Up \-The \-Game \-Area
+\-Constructor \-For \-The \-Class
 
-\-Initial \-Setup
+\hyperlink{classMyWidget}{\-My\-Widget} \-Is \-A \-Class \-That \-Generates all \-Windows, \-Buttons, and \-Scenes \-To \-Be \-Shown 
 
-\-Establish \-Final \-Layout 
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classMyWidget_ac865162c8fd0a248ff3c898acf44346a}{\index{\-My\-Widget@{\-My\-Widget}!gamestart@{gamestart}}
+\index{gamestart@{gamestart}!MyWidget@{\-My\-Widget}}
+\subsubsection[{gamestart}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-My\-Widget\-::gamestart} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}\label{classMyWidget_ac865162c8fd0a248ff3c898acf44346a}
+\-Initializes \-The \-Start \-Of \-The \-Game \-When \-The \-Start \-Game \-Button \-Is \-Pressed \hypertarget{classMyWidget_a7fe115a58a90c7ab2fcd9a53f22a5480}{\index{\-My\-Widget@{\-My\-Widget}!handle\-Timer@{handle\-Timer}}
+\index{handle\-Timer@{handle\-Timer}!MyWidget@{\-My\-Widget}}
+\subsubsection[{handle\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-My\-Widget\-::handle\-Timer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}\label{classMyWidget_a7fe115a58a90c7ab2fcd9a53f22a5480}
+\-Will \-Manage \-What \-Occurs \-While \-The \-Timer \-Is \-Running \hypertarget{classMyWidget_ace80c33361b5ab60cf68bdb7b402e8cc}{\index{\-My\-Widget@{\-My\-Widget}!key\-Press\-Event@{key\-Press\-Event}}
+\index{key\-Press\-Event@{key\-Press\-Event}!MyWidget@{\-My\-Widget}}
+\subsubsection[{key\-Press\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-My\-Widget\-::key\-Press\-Event} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-Key\-Event $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMyWidget_ace80c33361b5ab60cf68bdb7b402e8cc}
+\-Executes \-Certain \-Actions \-When \-Certain \-Buttons \-Are \-Pressed \hypertarget{classMyWidget_a1c141bc73b239b6d2114cff966da0eb4}{\index{\-My\-Widget@{\-My\-Widget}!key\-Release\-Event@{key\-Release\-Event}}
+\index{key\-Release\-Event@{key\-Release\-Event}!MyWidget@{\-My\-Widget}}
+\subsubsection[{key\-Release\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-My\-Widget\-::key\-Release\-Event} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-Key\-Event $\ast$}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classMyWidget_a1c141bc73b239b6d2114cff966da0eb4}
+\-Makes \-Sure \-That \-Keypresses \-Don't \-Last \-Forever \hypertarget{classMyWidget_a4524740a902212a980aa6418a5ead60a}{\index{\-My\-Widget@{\-My\-Widget}!live@{live}}
+\index{live@{live}!MyWidget@{\-My\-Widget}}
+\subsubsection[{live}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-My\-Widget\-::live} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMyWidget_a4524740a902212a980aa6418a5ead60a}
+\-Returns \-If \-The \-Timer \-Is \-Running \hypertarget{classMyWidget_af010626705546e924ce283a7b1a29f44}{\index{\-My\-Widget@{\-My\-Widget}!pauz@{pauz}}
+\index{pauz@{pauz}!MyWidget@{\-My\-Widget}}
+\subsubsection[{pauz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-My\-Widget\-::pauz} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}slot\mbox{]}}}}\label{classMyWidget_af010626705546e924ce283a7b1a29f44}
+\-Pauses \-The \-Game 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classMyWidget_a923b117544cec8aff3fb8cc50fe6853a}{\index{\-My\-Widget@{\-My\-Widget}!timer@{timer}}
+\index{timer@{timer}!MyWidget@{\-My\-Widget}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}\-Q\-Timer$\ast$ {\bf \-My\-Widget\-::timer}}}\label{classMyWidget_a923b117544cec8aff3fb8cc50fe6853a}
+\-Initializes \-The \-Timer 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
