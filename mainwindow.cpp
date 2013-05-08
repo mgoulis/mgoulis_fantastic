@@ -408,13 +408,13 @@ void MyWidget::highscore()
  	 if(fin.fail())
  	 	{
  	 	 ss<<"1. "<<(nom->text().toStdString())<<" "<<score;
- 	 	 nom->setText("");
+ 	 	 
  	 	 ss<<"\n2.\n3. ";
  	 	 //write to file
  	 	 fin.close(); 
  	 	 fout.open(filename.c_str());
- 	 	 fout<<(nom->text().toStdString())<<"\n"<<score<<"\n\n\n\n\n";
- 	 	 fout.close();
+ 	 	 fout<<(nom->text().toStdString())<<"\n"<<score<<"\n          \n"<<0<<"\n           \n"<<0<<"\n";
+ 	 	 fout.close();nom->setText("");
  	 	}
  	 else{
  	 	int i, holdI, tempI;string holdS, tempS;
